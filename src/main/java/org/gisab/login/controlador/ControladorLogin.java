@@ -2,7 +2,6 @@ package org.gisab.login.controlador;
 
 import javax.persistence.Entity;
 
-@Entity
 public class ControladorLogin 
 {
 	private String nombre;
