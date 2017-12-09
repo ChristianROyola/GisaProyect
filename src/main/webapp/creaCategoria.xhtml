@@ -1,0 +1,41 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" template="pages-blank.xhtml"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+	<ui:define name="titulo">Ingresar Categoria</ui:define>
+
+	<ui:define name="contenido">
+		<h:form enctype="multipart/form-data" id="formulario">
+
+			<h1>Ingreso de Categoria de Contenidos</h1>
+			<br />
+			<br />
+			
+			<h:panelGrid columns="3">
+
+				<h:outputLabel value="Nombre Categoria:" for="nombCategoria" />
+				<h:inputText id="nombCategoria"
+					value="#{categoriaController.categoria.nombre}"
+					class="form-control" pt:placeholder="Embarazo" />
+				<h:message for="nombCategoria" />
+
+				<h:outputLabel value="Descripción:" for="catDescripcion" />
+				<h:inputTextarea id="catDescripcion"
+					value="#{categoriaController.categoria.descipcion}"
+					class="form-control"
+					pt:placeholder="Descripcion Categoria"
+					requiredMessage="Ingrese Descripcion" cols="100" rows="5" />
+				<h:message for="catDescripcion" />
+
+				<h:commandButton action="#{categoriaController.guardar()}"
+					value="Guardar" class="btn btn-success" />
+			</h:panelGrid>
+
+			<h:form>
+			
+			</h:form>
+		</h:form>
+	</ui:define>
+</ui:composition>
