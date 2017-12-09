@@ -82,6 +82,7 @@ public class ContenidoDao {
 		TypedQuery<Contenido> query = em.createQuery(sql, Contenido.class);
 		List<Contenido> lcontent = query.getResultList();
 		return lcontent;
+		
 	}
 	/**
 	 * Metodo para listar los contenidos del titulo
