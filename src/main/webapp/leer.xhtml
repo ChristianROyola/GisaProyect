@@ -1,0 +1,49 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" template="pages-blank.xhtml">
+
+	<ui:define name="titulo">Adminitradores</ui:define>
+	<ui:define name="contenido">
+
+		<h:form>
+<h:outputText  value="Sin datos" rendered="#{empty  administradorController.ladmins}"></h:outputText>
+			<h:dataTable var="admin" style="color:black" class="table table-hover"
+				value="#{administradorController.listaAdmin()}" border="2">
+
+				<h:column Style="color: black">
+					<f:facet name="header">Id</f:facet> #{admin.id}
+		       </h:column>
+
+				<h:column Style="color: black">
+					<f:facet name="header">Nombre:</f:facet> #{admin.nombre}
+	        	</h:column>
+
+				<h:column Style="color: black">
+					<f:facet name="header">Apellido</f:facet>#{admin.apellido}
+		        </h:column>
+
+				<h:column Style="color: black">
+					<f:facet name="header">Correo</f:facet>#{admin.correo}
+		        </h:column>
+
+				<h:column Style="color: black">
+					<f:facet name="header">Perfil</f:facet>#{admin.perfil}
+		        </h:column>
+
+				<h:column Style="color: black">
+					<f:facet name="header">Contrasenia</f:facet>
+				</h:column>
+
+				<h:column Style="color: black">
+					<f:facet name="header">Estado</f:facet>#{admin.estado}
+		        </h:column>
+
+			</h:dataTable>
+
+		</h:form>
+	</ui:define>
+</ui:composition>
+
+
+

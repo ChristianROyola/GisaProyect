@@ -225,7 +225,7 @@ public class AdministradorController {
 	 */
 
 	public String eliminarAdmins(int id) {
-		pdao.deletePersona(id);
+		pdao.deleteAdmin(id);
 		return "actualizar";
 	}
 
@@ -328,16 +328,7 @@ public class AdministradorController {
 	public void setNusuario(String nusuario) {
 		this.nusuario = nusuario;
 	}
-/*
-	public int getIdrecuprerar() {
-		return idrecuprerar;
-	}
 
-	public void setIdrecuprerar(int idrecuprerar) {
-		this.idrecuprerar = idrecuprerar;
-		loadid(idrecuprerar);
-	}
-*/
 	public List<Administrador> getListPerID() {
 		return ListAdminID;
 	}
@@ -411,7 +402,7 @@ public class AdministradorController {
 	}
 
 	public Administrador getMyUser() {
-		return admin;
+		return myUser;
 	}
 
 	public void setMyUser(Administrador admin) {
