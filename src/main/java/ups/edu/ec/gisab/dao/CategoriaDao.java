@@ -18,7 +18,7 @@ public class CategoriaDao {
 
 	/**
 	 * Guardar las categorias en base a un id de la misma 
-	 * @param c
+	 * @param c  
 	 */
 	public void guardarCategoria(Categoria c) {
 		Categoria aux = leerCategoria(c.getId());

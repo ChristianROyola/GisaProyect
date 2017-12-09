@@ -31,7 +31,7 @@ import ups.edu.ec.gisab.utilidades.SessionUtils;
  *
  */
 @ManagedBean
-@SessionScoped
+@SessionScoped 
 public class AdministradorController {
 
 	private Administrador administrador = null;

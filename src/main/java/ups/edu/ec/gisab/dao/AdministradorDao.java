@@ -15,7 +15,7 @@ import ups.edu.ec.gisab.modelo.Administrador;
  *
  */
 
-@Stateless
+@Stateless  
 public class AdministradorDao 
 {
 	@Inject

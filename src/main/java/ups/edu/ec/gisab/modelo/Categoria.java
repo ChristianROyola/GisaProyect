@@ -32,7 +32,7 @@ public class Categoria {
 	@Column(name = "cat_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int id;
-
+   
 	@Column(name = "cat_nombre")
 	@NotBlank(message = "Ingrese la categoria")
 	@Size(min = 3, max = 30)

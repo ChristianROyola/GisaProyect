@@ -21,7 +21,7 @@ import org.hibernate.validator.constraints.NotBlank;
 @Table(name = "elgg_admin")
 public class Administrador 
 {
-	/**
+	/** 
 	 * Validacion de campos 
 	 * para registro.
 	 */

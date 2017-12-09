@@ -1,26 +1,26 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html" 
-    xmlns:hs="http://xmlns.jcp.org/jsf/html"
-    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
-    template="pages-blank.xhtml">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:hs="http://xmlns.jcp.org/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	template="pages-blank.xhtml">
 
-<h:head></h:head>
+	<h:head></h:head>
 	<f:metadata>
-	<f:viewParam name="id" value="#{administradorController.id}"></f:viewParam>
+		<f:viewParam name="id" value="#{administradorController.id}"></f:viewParam>
 	</f:metadata>
-	
+
 	<ui:define name="titulo">Administradores</ui:define>
 	<ui:define name="contenido">
 
 		<center>
-		<h1>Ingreso Administrador</h1>
+			<h1>Ingreso Administrador</h1>
 
-		<h:form >
-		<h:panelGrid columns="1">
+			<h:form>
+				<h:panelGrid columns="1">
 
-			<h:outputLabel value="Nombre: " for="nombre" />
+					<h:outputLabel value="Nombre: " for="nombre" />
 					<h:inputText value="#{administradorController.admin.nombre}"
 						id="nombre" class="form-control input-sm" pt:placeholder="Nombre" />
 					<h:message for="nombre" errorStyle="color:red; display:block" />
@@ -39,14 +39,16 @@
 						pt:placeholder="usuario@gmail.com" />
 					<h:message for="correo" errorStyle="color:red; display:block" />
 					<br />
-			
-</h:panelGrid>
-			<h:commandButton action="#{administradorController.modificar()}" value="Actualizar" class="btn btn-success btn-inline">
-			</h:commandButton>
-			<br/>
-			<br/>
-			<h:commandButton action="actualizar" value="Cancelar" class="btn btn-info btn-inline"/>
-		</h:form>
-</center>
+
+				</h:panelGrid>
+				<h:commandButton action="#{administradorController.modificar()}"
+					value="Actualizar" class="btn btn-success btn-inline">
+				</h:commandButton>
+				<br />
+				<br />
+				<h:commandButton action="actualizar" value="Cancelar"
+					class="btn btn-info btn-inline" />
+			</h:form>
+		</center>
 	</ui:define>
 </ui:composition>

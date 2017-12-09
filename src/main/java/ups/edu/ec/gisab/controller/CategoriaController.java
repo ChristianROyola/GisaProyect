@@ -8,7 +8,7 @@ import javax.inject.Inject;
 
 import ups.edu.ec.gisab.dao.CategoriaDao;
 import ups.edu.ec.gisab.modelo.Categoria;
-import ups.edu.ec.gisab.modelo.Contenido;
+
 
 /**
  * Entidad de validacion de categorias 
@@ -18,7 +18,7 @@ import ups.edu.ec.gisab.modelo.Contenido;
 @ManagedBean
 public class CategoriaController {
 	
-	
+	 
 	@Inject
 	private CategoriaDao catedao;
 	
