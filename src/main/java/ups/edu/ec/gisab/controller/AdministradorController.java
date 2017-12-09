@@ -284,14 +284,14 @@ public class AdministradorController {
 
 	public void verificaSesion() {
 		HttpSession session = SessionUtils.getSession();
-		String nusv = (String) session.getAttribute("username");
+		String nusv = (String) session.getAttribute("ADMIN");
 		if (nusv != null) {
 			FacesContext contex = FacesContext.getCurrentInstance();
 			try {
 				if (myUser.getPerfil().equals("ADMIN")) {
-					contex.getExternalContext().redirect("mainUser.html");
+					contex.getExternalContext().redirect("mainAdmin.xhtml");
 				} else if (myUser.getPerfil().equals("ADMIN-ROOT")) {
-					contex.getExternalContext().redirect("mainAdmin.html");
+					contex.getExternalContext().redirect("mainAdminroot.xhtml");
 				}
 
 			} catch (IOException e) {
