@@ -1,0 +1,33 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" template="pages-blank.xhtml">
+
+	<ui:define name="titulo">Contenidos</ui:define>
+	<ui:define name="contenido">
+
+		<h:form>
+
+			<h:outputText value="El registro no contiene datos"
+				rendered="#{empty  contenidoController.LContenido}"></h:outputText>
+			<h:dataTable var="listacontent" style="color:black"
+				value="#{contenidoController.listaContenidos()}" border="2" class="table"
+				styleClass="table table-striped table-bordered">
+
+				<h:column Style="color: black"> 
+				<f:facet name="header">Codigo</f:facet>	#{listacontent.codigo}
+				</h:column>
+
+				<h:column Style="color: black">
+					<f:facet name="header">Titulo</f:facet>	#{listacontent.titulo}
+				</h:column>
+
+				<h:column Style="color: black">
+					<f:facet name="header">Descripcion</f:facet> #{listacontent.descripcion}
+				</h:column>
+			</h:dataTable>
+	
+		</h:form>
+	</ui:define>
+</ui:composition>
+

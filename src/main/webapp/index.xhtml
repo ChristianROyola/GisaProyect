@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:hs="http://xmlns.jcp.org/jsf/html"
+	  xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"> 
+<h:head>
+
+<title>Panel Administracion Gisab</title>
+<meta name="description" content=""/>
+<meta name="author" content=""/>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<link rel="stylesheet" href="resources/user/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="resources/user/css/animate.css"/>
+<link rel="stylesheet" href="resources/user/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="resources/user/css/owl.theme.css"/>
+<link rel="stylesheet" href="resources/user/css/owl.carousel.css"/>
+
+<!-- Main css -->
+<link rel="stylesheet" href="resources/user/css/style.css"/>
+
+<!-- Google Font -->
+<link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'/>
+
+</h:head>
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+
+<div class="preloader">
+
+	<div class="sk-rotating-plane"></div>
+
+</div>
+
+<ui:insert name="navigation">
+<div class="navbar navbar-fixed-top custom-navbar" role="navigation">
+	<div class="container">
+
+		<!-- navbar header -->
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">Panel Admin Gisab</a>
+		</div>
+
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#intro" class="smoothScroll">Intro</a></li>
+				<li><a href="#program" class="smoothScroll">Login</a></li>
+				<li><a href="#contact" class="smoothScroll">Contact</a></li>
+			</ul>
+
+		</div>
+
+	</div>
+</div>
+</ui:insert>
+
+<ui:insert name="intro">
+<section id="intro" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<h3 class="wow bounceIn" data-wow-delay="0.9s">Panel Admininistrativo Gisab</h3>
+				<h1 class="wow fadeInUp" data-wow-delay="1.6s">Bienvenido</h1>
+				<a href="#program" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">Login</a>
+			</div>
+
+
+		</div>
+	</div>
+</section>
+</ui:insert>
+<ui:insert name="speakers">
+<section id="speakers" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12 wow bounceIn">
+				<div class="section-title">
+					<h2>Creative Speakers</h2>
+					<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+				</div>
+			</div>
+
+			<!-- Testimonial Owl Carousel section
+			================================================== -->
+			<div id="owl-speakers" class="owl-carousel">
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="speakers-wrapper">
+						<img src="images/speakers-img1.jpg" class="img-responsive" alt="speakers"/>
+							<div class="speakers-thumb">
+								<h3>Jenny Green</h3>
+								<h6>UI Designer</h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+					<div class="speakers-wrapper">
+						<img src="images/speakers-img2.jpg" class="img-responsive" alt="speakers"/>
+							<div class="speakers-thumb">
+								<h3>David Yoon</h3>
+								<h6>Creative Director</h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
+					<div class="speakers-wrapper">
+						<img src="images/speakers-img3.jpg" class="img-responsive" alt="speakers"/>
+							<div class="speakers-thumb">
+								<h3>Je Mary Lee</h3>
+								<h6>Web Specialist</h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+					<div class="speakers-wrapper">
+						<img src="images/speakers-img4.jpg" class="img-responsive" alt="speakers"/>
+							<div class="speakers-thumb">
+								<h3>Johnathan Doe</h3>
+								<h6>Frontend Dev</h6>
+							</div>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
+					<div class="speakers-wrapper">
+						<img src="images/speakers-img5.jpg" class="img-responsive" alt="speakers"/>
+							<div class="speakers-thumb">
+								<h3>Elite Hamilton</h3>
+								<h6>Marketing Guru</h6>
+							</div>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+</section>
+</ui:insert>
+
+<ui:insert name="program">
+
+<section id="program" class="parallax-section">
+	<div class="container">
+		<div class="row">
+<center>
+			<div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="0.6s">
+				<div class="section-title">
+					<h2>Login de Usuarios</h2>
+					<p>Ingrese sus Credenciales.</p>
+				</div>
+			</div>
+</center>
+			<center>
+<div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <h:form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <div>
+                <div class="form-group">
+                <h:outputText value="Usuario: " />
+                <h:inputText type="email" pt:placeholder="usuario@dominio.com" class="form-control" value="#{administradorController.admin.correo}" id="usuario"/>
+                </div>
+                <div class="form-group">
+                <h:outputText value="Password: " />
+                <h:inputSecret value="#{administradorController.admin.contrasenia}" class="form-control" pt:placeholder="*****" id="contrasenia"/>
+                </div>
+                </div>
+                
+                <h:outputText value="#{administradorController.loginexiste}" id="mensaje" style="color:red; display:block" />
+
+								<h:commandButton action="#{administradorController.iniciarSesion()}"
+									value="Acceder" class="btn btn-lg btn-primary btn-block btn-signin">
+									<f:ajax render="mensaje usuario contrasena"
+										execute="usuario contrasenia" />
+								</h:commandButton>
+
+            </h:form><!-- /form -->
+
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+    </center>
+
+
+		</div>
+</div>
+</section>
+</ui:insert>
+
+<ui:insert name="faq">
+<!-- =========================
+    FAQ SECTION   
+============================== -->
+<section id="faq" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Section title
+			================================================== -->
+			<div class="wow bounceIn col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 text-center">
+				<div class="section-title">
+					<h2>Como ser colaborador administrativo Gisab?</h2>
+					<p>A continuacion le facilitamos informacion de como ser un administrador del sitio.</p>
+				</div>
+			</div>
+
+			<div class="wow fadeInUp col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10" data-wow-delay="0.9s">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  					<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingOne">
+      						<h4 class="panel-title">
+        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          							 Que es Gisab?
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      						<div class="panel-body">
+        						<p>Gisab es una plataforma social que alberga contenidos accesibles sobre Salud sexual 
+        						y Reproductivo (SSR), dirigido a las mujeres sordas de Cuenca - Ecuador</p>
+      						</div>
+   						 </div>
+ 					</div>
+
+    				<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingTwo">
+      						<h4 class="panel-title">
+        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          							Como ser Colaborador administrativo?
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      						<div class="panel-body">
+                            	<p>Para poder colaborar en el proyecto debe proporcionar una peticion de colaboracion, la cual 
+                            	contiene sus datos personales como: Numero de Cedula, Nombres, Apellidos, Profesion y Especialidad en la cual
+                            	te interesa apoyar.</p>
+      						</div>
+   						 </div>
+ 					</div>
+
+ 					<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingThree">
+      						<h4 class="panel-title">
+        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          							Beneficios de ser colaborados administrativo gisab?
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      						<div class="panel-body">
+                            	<p> Complementando al valor social que puedes aportar con tus conocimientos, tendras 
+                            	un reconocimiento dentro de la plataforma y medios relacionados a la misma, como colaborador destacado
+                            	y tener acceso a formar parte de un comite organizacional de eventos inclusivos en Salud Sexual y Reproductiva
+                            	SSR, entre otros beneficios sociales que puedes aportar por medio de Gisab.</p>
+        						
+      						</div>
+   						 </div>
+ 					 </div>
+
+ 				 </div>
+			</div>
+
+		</div>
+		</div>
+</section>
+</ui:insert>
+
+
+<ui:insert name="contact">
+<!-- =========================
+    CONTACT SECTION   
+============================== -->
+<section id="contact" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="wow fadeInUp col-md-offset-1 col-md-5 col-sm-6" data-wow-delay="0.6s">
+				<div class="contact_des">
+					<h3>Formar Parte de Gisab</h3>
+					<p>Proin sodales convallis urna eu condimentum. Morbi tincidunt augue eros, vitae pretium mi condimentum eget. Suspendisse eu turpis sed elit pretium congue.</p>
+					<p>Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum. Praesent ullamcorper mauris fermentum turpis scelerisque rutrum eget eget turpis.</p>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor.</p>
+				</div>
+			</div>
+
+			<div class="wow fadeInUp col-md-5 col-sm-6" data-wow-delay="0.9s">
+				<div class="contact_detail">
+					<div class="section-title">
+						<h2>Ser Parte</h2>
+					</div>
+					<h:form action="#" method="post">
+						<input name="nombre" type="text" class="form-control" id="name" placeholder="Name"/>
+						<input name="apellido" type="text" class="form-control" id="apellido" placeholder="Apellido"/>
+						<input name="cedula" type="text" class="form-control" id="cedula" placeholder="Cedula"/>
+					  	<input name="email" type="email" class="form-control" id="email" placeholder="Email"/>
+					  	<textarea name="message" rows="5" class="form-control" id="message" placeholder="Especialidad"></textarea>
+						<div class="col-md-6 col-sm-10">
+							<h:inputText name="submit" type="submit" class="form-control" id="submit" value="Solicitar"/>
+						</div>
+					</h:form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+</ui:insert>
+
+
+<ui:insert name="footer">
+<!-- =========================
+    FOOTER SECTION   
+============================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<p class="wow fadeInUp" data-wow-delay="0.6s">Copyright &copy; UPS Gisab 2017 
+                    
+                    | Design: <a rel="nofollow" href="http://www.templatemo.com/page/1" target="_parent">Templatemo</a></p>
+
+				<ul class="social-icon">
+					<li><a href="#" class="fa fa-facebook wow fadeInUp" data-wow-delay="1s"></a></li>
+					<li><a href="#" class="fa fa-twitter wow fadeInUp" data-wow-delay="1.3s"></a></li>
+					<li><a href="#" class="fa fa-dribbble wow fadeInUp" data-wow-delay="1.6s"></a></li>
+					<li><a href="#" class="fa fa-behance wow fadeInUp" data-wow-delay="1.9s"></a></li>
+					<li><a href="#" class="fa fa-google-plus wow fadeInUp" data-wow-delay="2s"></a></li>
+				</ul>
+
+			</div>
+			
+		</div>
+	</div>
+</footer>
+</ui:insert>
+
+<!-- Back top -->
+<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+
+<!-- =========================
+     SCRIPTS   
+============================== -->
+<script src="resources/user/js/jquery.js"></script>
+<script src="resources/user/js/bootstrap.min.js"></script>
+<script src="resources/user/js/jquery.parallax.js"></script>
+<script src="resources/user/js/owl.carousel.min.js"></script>
+<script src="resources/user/js/smoothscroll.js"></script>
+<script src="resources/user/js/wow.min.js"></script>
+<script src="resources/user/js/custom.js"></script>
+
+</body>
+</html>

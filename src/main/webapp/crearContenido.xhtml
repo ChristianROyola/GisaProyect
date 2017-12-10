@@ -1,0 +1,50 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" template="pages-blank.xhtml"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+	
+	<ui:define name="titulo">Crear Contenido</ui:define>
+	
+	<ui:define name="contenido">
+		<h:form enctype="multipart/form-data" id="formulario">
+
+			<center>
+				<h2>Ingreso de Contenidos</h2>
+			</center>
+			<br />
+			<br />
+
+			<div class="alert alert-info">
+				<strong>Info!</strong> * Campos Obligatorios.
+			</div>
+			
+			<h:panelGrid columns="3">
+
+				<h:outputLabel value="* Titulo " for="tituloContenido" />
+				<h:inputText id="tituloContenido"
+					value="#{contenidoController.contenido.titulo}" class="form-control"
+					style="color:blue" pt:placeholder="Titulo" />
+				<h:message for="tituloContenido" />
+
+			</h:panelGrid>
+
+			<span class="glyphicon glyphicon-pencil"></span>
+			<h:outputLabel value="* Descripción:" for="descContenido" />
+
+			<span class="glyphicon glyphicon-pencil"></span>
+			<h:outputLabel value="* Descripcion:" for="descContenido" />
+			<br />
+			<h:inputTextarea id="descContenido"
+				value="#{contenidoController.contenido.descripcion}" required="true"
+				requiredMessage="Descripcion" cols="100" rows="5"></h:inputTextarea>
+			<h:message for="descContenido" />
+
+			<br />
+			<br />
+			<h:commandButton action="#{contenidoController.insertar()}"
+				value="Guardar" class="btn btn-success" />
+			<h:messages globalOnly="true" />
+		</h:form>
+	</ui:define>
+</ui:composition>

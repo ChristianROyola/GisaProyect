@@ -1,0 +1,78 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:hs="http://xmlns.jcp.org/jsf/html"
+    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head><title>Crear Admin</title></h:head>
+<h:body>
+
+	<ui:composition template="pages-blank.xhtml">
+	<ui:define name="titulo">Administradores</ui:define>
+	<ui:define name="contenido">
+		<center>
+			<h1>Registro Administradores</h1>
+			<h:form role="form" id="formregistro">
+				<h:panelGrid columns="1">
+
+
+					<h:outputLabel value="Nombre: " for="nombre" />
+					<h:inputText value="#{administradorController.admin.nombre}"
+						id="nombre" class="form-control input-sm" pt:placeholder="Nombre" />
+					<h:message for="nombre" errorStyle="color:red; display:block" />
+
+
+					<h:outputLabel value="Apellido: " for="apellido" />
+					<h:inputText value="#{administradorController.admin.apellido}"
+						id="apellido" class="form-control input-sm"
+						pt:placeholder="Apellido" />
+					<h:message for="apellido" errorStyle="color:red; display:block" />
+					<br />
+
+					<h:outputLabel value="Correo: " for="correo" />
+					<h:inputText value="#{administradorController.admin.correo}"
+						id="correo" class="form-control input-sm"
+						pt:placeholder="usuario@gmail.com" >
+						<f:validateRegex pattern=".+@.+\.[a-z]+"/>
+						</h:inputText>
+					<h:message for="correo" errorStyle="color:red; display:block" />
+					<br />
+
+					<h:outputLabel value="Contraseña: " for="contrasenia" />
+					<h:inputSecret name="contrasenia" id="contrasenia"
+						value="#{administradorController.admin.contrasenia}"
+						class="form-control input-sm" pt:placeholder="*****" />
+					<h:message for="contrasenia" errorStyle="color:red; display:block" />
+					<br />
+
+					<h:outputLabel value="Nuevamente su contraseña: "
+						for="rcontrasenia" />
+					<h:inputSecret name="rcontrasenia" id="rcontrasenia"
+						value="#{administradorController.contrasenia}"
+						class="form-control input-sm" pt:placeholder="*****" />
+					<h:message for="rcontrasenia" errorStyle="color:red; display:block" />
+					<br />
+
+				</h:panelGrid>
+				
+				<h:outputText id="muestraValor"
+					value="#{administradorController.conincidencia}" errorStyle="color:red; display:block"/>
+				<h:commandButton type="submit" value="Registrar" id="Crear"
+					action="#{administradorController.crear()}"
+					class="btn btn-success btn-inline">
+<f:ajax execute="rcontrasenia contrasenia correo nombre apellido formregistro" render="muestraValor" ></f:ajax>
+				</h:commandButton>
+				<br/>
+				<br/>
+				<h:commandButton action="actualizar" value="Cancelar" class="btn btn-info btn-inline"/>
+			</h:form>
+		</center>
+
+	</ui:define>
+</ui:composition>
+</h:body>
+</html>
+
+
