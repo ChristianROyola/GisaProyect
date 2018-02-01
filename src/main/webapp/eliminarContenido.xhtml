@@ -1,0 +1,47 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" template="pages-blank.xhtml">
+
+<ui:define name="titulo">Eliminar Contenidos</ui:define>
+	<ui:define name="contenido">
+	<h:form>
+	
+	<h:dataTable var="listacontent" style="color:black"
+	value="#{contenidoController.listaContenidos()}" border="2" class="table" styleClass="table table-striped table-bordered">	
+	
+	
+		<h:column Style="color: black">
+			<f:facet name="header">Codigo</f:facet>
+			#{listacontent.codigo}
+		</h:column>
+	
+		<h:column Style="color: black">
+			<f:facet name="header">Titulo</f:facet>
+			#{listacontent.titulo}
+		</h:column>
+	
+		<h:column Style="color: black">
+			<f:facet name="header">Descripcion</f:facet>
+			#{listacontent.descripcion}
+		</h:column>
+
+	<h:column Style="color: black">
+					<f:facet name="header" Style="color: black"><center>Editar Contenido</center></f:facet>
+						<center><a href="editarContenido.xhtml?id=#{listacontent.codigo}" class="btn btn-info btn-lg">
+          				<span class="glyphicon glyphicon-refresh"></span> Editar C
+        </a></center>
+				
+				</h:column>
+	
+	<h:column Style="color: black">
+					<f:facet name="header" Style="color: black">Eliminar Contenido</f:facet>
+					<h:commandButton value="Eliminar" class="btn btn-danger"
+						action="#{contenidoController.eliminar(listacontent.codigo)}" />
+				</h:column>
+	</h:dataTable>
+	</h:form>
+	</ui:define>
+</ui:composition>
+
+	

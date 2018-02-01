@@ -5,231 +5,322 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 
 <h:head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<!-- Tell the browser to be responsive to screen width -->
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
-	<!-- Favicon icon -->
-	<link rel="icon" type="image/png" sizes="16x16"
-		href="resources/assets/images/favicon.png" />
-	<title>Cuenta Gisab Administrador</title>
-	<!-- Bootstrap Core CSS -->
-	<link href="resources/assets/plugins/bootstrap/css/bootstrap.min.css"
-		rel="stylesheet" />
-	<!-- Custom CSS -->
-	<link href="resources/lite version/css/style.css" rel="stylesheet" />
-	<!-- You can change the theme colors from here -->
-	<link href="resources/lite version/css/colors/blue.css" id="theme"
-		rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/assets/images/favicon.png" />
+    <title>Cuenta Gisab Administrador</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="resources/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="resources/lite version/css/style.css" rel="stylesheet" />
+    <!-- You can change the theme colors from here -->
+    <link href="resources/lite version/css/colors/blue.css" id="theme" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 </h:head>
 
 <body class="fix-header card-no-border">
-	<!-- ============================================================== -->
-	<!-- Preloader - style you can find in spinners.css -->
-	<!-- ============================================================== -->
-	<div class="preloader">
-		<svg class="circular" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none"
-				stroke-width="2" stroke-miterlimit="10" /> </svg>
-	</div>
-	<div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50" >
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="pages-blank.xhtml">
+                        <!-- Logo icon -->
+                        <b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="resources/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <span>
+                         <!-- dark Logo text -->
+                         <img src="resources/assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         </span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto mt-md-0 ">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item hidden-sm-down">
+                            <form class="app-search p-l-20">
+                                <input type="text" class="form-control" placeholder="Buscar" /> <a class="srh-btn" ><i class="ti-search"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="resources/assets/images/users/1.jpg" alt="user" class="profile-pic m-r-5" />Bienvenido</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                      <!-- aki  -->
+                    
+                <!-- =============================================== -->
 
-		<header class="topbar">
-			<nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+		<!-- Left side column. contains the sidebar -->
+		<aside class="main-sidebar">
+			<!-- sidebar: style can be found in sidebar.less -->
+			<section class="sidebar">
+				<!-- Sidebar user panel -->
+				<div class="user-panel">
+					<div class="pull-left image">
+					</div>
+					<div class="pull-left info">
+					</div>
+				</div>
+			
+				<!-- sidebar menu: : style can be found in sidebar.less -->
+				<ul class="sidebar-menu" data-widget="tree">
+					<li class="header">Navegacion Principal</li>
 
-				<div class="navbar-header">
-					<a class="navbar-brand" href="index.html"> <!-- Logo icon --> <b>
-							<!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-							<!-- Dark Logo icon --> <img
-							src="resources/assets/images/logo-icon.png" alt="homepage"
-							class="dark-logo" />
-
-					</b> <!--End Logo icon --> <!-- Logo text --> <span> <!-- dark Logo text -->
-							<img src="resources/assets/images/logo-text.png" alt="homepage"
-							class="dark-logo" />
-					</span>
+					<li class="treeview active"><a href="#"> <i
+							class="fa fa-columns m-r-10"></i> <span>Administracion</span> <span
+							class="pull-right-container"> <i
+								class="fa fa-angle-left pull-right"></i>
+						</span>
 					</a>
-				</div>
+						<ul class="treeview-menu">
+							<li><a href="crearPersona.xhtml"><i class=""></i>
+									Ingresar Administrador</a></li>
+							<li><a href="leer.xhtml"><i class=""></i>
+									Listar Administradores</a></li>
+							<li><a href="actualizar.xhtml"><i class=""></i>
+									Gestionar Administrador</a></li>
+						</ul></li>
 
-				<div class="navbar-collapse">
+						<li class="treeview active"><a href="#"> <i
+							class="fa fa-columns m-r-10"></i> <span>Categoria Contenidos</span> <span
+							class="pull-right-container"> <i
+								class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+						<ul class="treeview-menu">
+							<li><a href="creaCategoria.xhtml"><i class=""></i>
+									Ingresar Categoria</a></li>
+							<li><a href="listadoCategoria.xhtml"><i class=""></i>
+									Listar Categorias</a></li>
+							<li><a href="listadoCategoriaAcciones.xhtml"><i class=""></i>
+									Gestionar Categoria</a></li>
+							
+						</ul></li>
+											
+					<li class="treeview active"><a href="#"> <i
+							class="fa fa-columns m-r-10"></i> <span>Contenidos</span> <span
+							class="pull-right-container"> <i
+								class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+					<ul class="treeview-menu">
+							
+									<li><a href="crearContenido.xhtml"><i class=""></i>
+									Crear Contenido</a></li>
+									
+									<li><a href="listarContenidos.xhtml"><i class=""></i>
+									Listar Contenido</a></li>
+									
+									<li><a href="eliminarContenido.xhtml"><i class=""></i>
+									Gestionar Contenidos</a></li>
+									
+						</ul></li>
+						
+          			<li class="treeview active"><a href="#"> <i
+							class="fa fa-columns m-r-10"></i> <span>Acerca de..</span> <span
+							class="pull-right-container"> <i
+								class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+						<ul class="treeview-menu">
+							<li><a href="crearExtra.xhtml"><i class=""></i>
+									Ingresar Extras</a></li>
+							<li><a href="listadoExtra.xhtml"><i class=""></i>
+									Listar Extras</a></li>
+							<li><a href="listadoExtrasAcciones.xhtml"><i class=""></i>
+									Gestionar Extras</a></li>
+							
+						</ul></li>					
 
-					<ul class="navbar-nav mr-auto mt-md-0 ">
-						<!-- This is  -->
-						<li class="nav-item"><a
-							class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark"
-							href="javascript:void(0)"><i class="ti-menu"></i></a></li>
-						<li class="nav-item hidden-sm-down">
-							<form class="app-search p-l-20">
-								<input type="text" class="form-control" placeholder="Buscar" />
-								<a class="srh-btn"><i class="ti-search"></i></a>
-							</form>
-						</li>
-					</ul>
-
-					<ul class="navbar-nav my-lg-0">
-						<li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle text-muted waves-effect waves-dark"
-							href="" data-toggle="dropdown" aria-haspopup="true"
-							aria-expanded="false"><img
-								src="resources/assets/images/users/1.jpg" alt="user"
-								class="profile-pic m-r-5" />Administradores</a></li>
-					</ul>
-				</div>
-			</nav>
-		</header>
-		<aside class="left-sidebar">
-			<!-- Sidebar scroll-->
-			<div class="scroll-sidebar">
-				<!-- Sidebar navigation-->
-				<nav class="sidebar-nav">
-					<ul id="sidebarnav">
-
-						<aside class="main-sidebar">
-							<!-- sidebar: style can be found in sidebar.less -->
-							<section class="sidebar">
-								<!-- Sidebar user panel -->
-								<div class="user-panel">
-									<div class="pull-left image"></div>
-									<div class="pull-left info"></div>
-								</div>
-
-								<!-- sidebar menu: : style can be found in sidebar.less -->
-								<ul class="sidebar-menu" data-widget="tree">
-									<li class="header">Navegacion Principal</li>
-
-									<li class="treeview active"><a href="#"> <i
-											class="fa fa-table"></i> <span>Administracion</span> <span
-											class="pull-right-container"> <i
-												class="fa fa-angle-left pull-right"></i>
-										</span>
-									</a>
-										<ul class="treeview-menu">
-											<li><a href="crearPersona.xhtml"><i
-													class="fa fa-circle-o"></i> Ingresar Administrador</a></li>
-											<li><a href="leer.xhtml"><i class="fa fa-circle-o"></i>
-													Listar Administradores</a></li>
-											<li><a href="actualizar.xhtml"><i
-													class="fa fa-circle-o"></i> Gestionar Administrador</a></li>
-										</ul></li>
-
-									<li class="treeview active"><a href="#"> <i
-											class="fa fa-table"></i> <span>Categoria Contenidos</span> <span
-											class="pull-right-container"> <i
-												class="fa fa-angle-left pull-right"></i>
-										</span>
-									</a>
-										<ul class="treeview-menu">
-											<li><a href="creaCategoria.xhtml"><i
-													class="fa fa-circle-o"></i> Ingresar Categoria</a></li>
-											<li><a href="listadoCategoria.xhtml"><i
-													class="fa fa-circle-o"></i> Listar Categorias</a></li>
-											<li><a href="gestionCategoria.xhtml"><i
-													class="fa fa-circle-o"></i> Gestionar Categoria</a></li>
-
-										</ul></li>
-
-									<li class="treeview active"><a href="#"> <i
-											class="fa fa-table"></i> <span>Contenidos</span> <span
-											class="pull-right-container"> <i
-												class="fa fa-angle-left pull-right"></i>
-										</span>
-									</a>
-										<ul class="treeview-menu">
-											<li><a href="crearContenido.xhtml"><i
-													class="fa fa-circle-o"></i> Crear Contenido</a></li>
-											<li><a href="listarContenidos.xhtml"><i
-													class="fa fa-circle-o"></i> Listar Contenido</a></li>
-
-											<li><a href="eliminarContenido.xhtml"><i
-													class="fa fa-circle-o"></i> Gestionar Contenidos</a></li>
-
-										</ul></li>
-
-								</ul>
-							</section>
-							<!-- /.sidebar -->
-						</aside>
-
-						<li><a href="index.html" class="waves-effect"><i
-								class="fa fa-clock-o m-r-10" aria-hidden="true"></i>Panel
-								Adminitracion</a></li>
-						<li><a href="pages-profile.html" class="waves-effect"><i
-								class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a></li>
-						<li><a href="table-basic.html" class="waves-effect"><i
-								class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a></li>
-						<li><a href="icon-fontawesome.html" class="waves-effect"><i
-								class="fa fa-font m-r-10" aria-hidden="true"></i>Icons</a></li>
-
-						<li><a href="pages-blank.html" class="waves-effect"><i
-								class="fa fa-columns m-r-10" aria-hidden="true"></i>Blank Page</a></li>
-
-					</ul>
-					<div class="text-center m-t-30">
-						<a href="http://www.gis-ami.com/gisami/activity"
-							class="btn btn-danger"> Ir a Sitio </a>
-					</div>
-				</nav>
-			</div>
+				</ul>
+			</section>
+			<!-- /.sidebar -->
 		</aside>
-		<div class="page-wrapper">
-			<div class="container-fluid">
-				<div class="row page-titles">
-					<div class="col-md-6 col-8 align-self-center">
-						<h3 class="text-themecolor m-b-0 m-t-0">Panel Adminitracion</h3>
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="javascript:void(0)">Inicio</a></li>
-							<li class="breadcrumb-item active"><ui:insert name="titulo">Dashboard</ui:insert></li>
-						</ol>
-					</div>
-					<div class="col-md-6 col-4 align-self-center">
-						<a href="http://www.gis-ami.com/gisami/activity"
-							class="btn pull-right hidden-sm-down btn-success"> Ir a Sitio</a>
-					</div>
-				</div>
 
-				<div class="row">
-					<div class="col-12">
-						<div class="card">
-							<div class="card-block">
-
-
-								<ui:insert name="contenido">
+		<!-- =============================================== -->
+                
+                <!-- fin -->
+                    
+                        <li>
+                            <a href="index.html" class="waves-effect"><i class="fa fa-clock-o m-r-10" aria-hidden="true"></i>Panel Adminitracion</a>
+                        </li>
+                        <li>
+                            <a href="pages-profile.html" class="waves-effect"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
+                        </li>
+                        <li>
+                            <a href="table-basic.html" class="waves-effect"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
+                        </li>
+                        <li>
+                            <a href="icon-fontawesome.html" class="waves-effect"><i class="fa fa-font m-r-10" aria-hidden="true"></i>Icons</a>
+                        </li>
+                        
+                        <li>
+                            <a href="pages-blank.html" class="waves-effect"><i class="fa fa-columns m-r-10" aria-hidden="true"></i>Blank Page</a>
+                        </li>
+                        
+                    </ul>
+                    <div class="text-center m-t-30">
+                        <a href="http://localhost/elgg/activity" class="btn btn-danger"> Ir a Sitio </a>
+                    </div>
+                </nav>
+                
+              
+                
+                
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-6 col-8 align-self-center">
+                        <h3 class="text-themecolor m-b-0 m-t-0">Panel Adminitración</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Inicio</a></li>
+                            <li class="breadcrumb-item active"> <ui:insert name="titulo">Dashboard</ui:insert></li>
+                        </ol>
+                    </div>
+                    <div class="col-md-6 col-4 align-self-center">
+                        <a href="http://localhost/elgg/activity" class="btn pull-right hidden-sm-down btn-success"> Ir a Sitio</a>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-block">
+                            
+                            
+                               <ui:insert name="contenido">
                                
-								Login Usario Root! Bienvenido!                               
+                               Bienvenido!!
+                               
                                </ui:insert>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<footer class="footer text-center"> © 2017 Wrappixel.com /
-				Gisab UPS / Cuenca - Ecuador </footer>
-		</div>
-	</div>
-
-	<script src="resources/assets/plugins/jquery/jquery.min.js"></script>
-	<!-- Bootstrap tether Core JavaScript -->
-	<script src="resources/assets/plugins/bootstrap/js/tether.min.js"></script>
-	<script src="resources/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-	<!-- slimscrollbar scrollbar JavaScript -->
-	<script src="resources/lite version/js/jquery.slimscroll.js"></script>
-	<!--Wave Effects -->
-	<script src="resources/lite version/js/waves.js"></script>
-	<!--Menu sidebar -->
-	<script src="resources/lite version/js/sidebarmenu.js"></script>
-	<!--stickey kit -->
-	<script
-		src="resources/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-	<!--Custom JavaScript -->
-	<script src="resources/lite version/js/custom.min.js"></script>
-	<!-- ============================================================== -->
-	<!-- Style switcher -->
-	<!-- ============================================================== -->
-	<script
-		src="resources/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+                           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-center">
+                © 2017 Wrappixel.com / Gisab UPS / Cuenca - Ecuador
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="resources/assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="resources/assets/plugins/bootstrap/js/tether.min.js"></script>
+    <script src="resources/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="resources/lite version/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="resources/lite version/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="resources/lite version/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="resources/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="resources/lite version/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="resources/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 </body>
 
 </html>

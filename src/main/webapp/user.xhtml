@@ -1,0 +1,701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:hs="http://xmlns.jcp.org/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<!-- Title -->
+<title>Blog Gisami</title>
+
+<!-- Favicon -->
+<link rel="icon" href="img/core-img/favicon.ico" />
+
+<!-- Core Stylesheet -->
+<link href="style.css" rel="stylesheet" />
+
+<!-- Responsive CSS -->
+<link href="css/responsive/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body>
+	<!-- Preloader Start -->
+	<div id="preloader">
+		<div class="yummy-load"></div>
+	</div>
+
+	<!-- Background Pattern Swither -->
+	<div id="pattern-switcher">Bienvenidos</div>
+	<div id="patter-close">
+		<i class="fa fa-times" aria-hidden="true"></i>
+	</div>
+
+	<!-- ****** Top Header Area Start ****** -->
+	<div class="top_header_area">
+		<div class="container">
+			<div class="row">
+				<div class="col-5 col-sm-6">
+					<!--  Top Social bar start -->
+					<div class="top_social_bar">
+						<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a
+							href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> <a
+							href="#"><i class="fa fa-skype" aria-hidden="true"></i></a> <a
+							href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!--  Login Register Area -->
+				<div class="col-7 col-sm-6">
+					<div
+						class="signup-search-area d-flex align-items-center justify-content-end">
+						<div class="login_register_area d-flex">
+							<div class="login">
+								<a href="register.html">Sing in</a>
+							</div>
+							<div class="register">
+								<a href="register.html">Sing up</a>
+							</div>
+						</div>
+						<!-- Search Button Area -->
+						<div class="search_button">
+							<a class="searchBtn" href="#"><i class="fa fa-search"
+								aria-hidden="true"></i></a>
+						</div>
+						<!-- Search Form -->
+						<div class="search-hidden-form">
+							<form action="#" method="get">
+								<input type="search" name="search" id="search-anything"
+									placeholder="Search Anything..." /> <input type="submit"
+									value="" class="d-none" /> <span class="searchBtn"><i
+									class="fa fa-times" aria-hidden="true"></i></span>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ****** Top Header Area End ****** -->
+
+	<!-- ****** Header Area Start ****** -->
+	<header class="header_area">
+	<div class="container">
+		<div class="row">
+			<!-- Logo Area Start -->
+			<div class="col-12">
+				<div class="logo_area text-center">
+					<a href="index.html" class="yummy-logo">Gisami Blog</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<nav class="navbar navbar-expand-lg">
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#yummyfood-nav" aria-controls="yummyfood-nav"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fa fa-bars" aria-hidden="true"></i> Menu
+				</button>
+				<!-- Menu Area Start -->
+				<div class="collapse navbar-collapse justify-content-center"
+					id="yummyfood-nav">
+					<ul class="navbar-nav" id="yummy-nav">
+						<li class="nav-item active"><a class="nav-link"
+							href="crearUser.xhtml">Inicio<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#">Ingresar</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">Registrarse</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="inicio.xhtml">Panel Admin</a>>
+						</li>
+					</ul>
+				</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+	</header>
+	<!-- ****** Header Area End ****** -->
+
+	<!-- ****** Welcome Post Area Start ****** -->
+	<section class="welcome-post-sliders owl-carousel"> <!-- Single Slide -->
+	<div class="welcome-single-slide">
+		<!-- Post Thumb -->
+		<img src="img/bg-img/slide-1.jpg" alt="" />
+		<!-- Overlay Text -->
+		<div class="project_title">
+			<div class="post-date-commnents d-flex">
+				<a href="#">May 19, 2017</a> <a href="#">5 Comment</a>
+			</div>
+			<a href="#">
+				<h5>“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street</h5>
+			</a>
+		</div>
+	</div>
+
+	<!-- Single Slide -->
+	<div class="welcome-single-slide">
+		<!-- Post Thumb -->
+		<img src="img/bg-img/slide-2.jpg" alt="" />
+		<!-- Overlay Text -->
+		<div class="project_title">
+			<div class="post-date-commnents d-flex">
+				<a href="#">May 19, 2017</a> <a href="#">5 Comment</a>
+			</div>
+			<a href="#">
+				<h5>“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street</h5>
+			</a>
+		</div>
+	</div>
+
+	<!-- Single Slide -->
+	<div class="welcome-single-slide">
+		<!-- Post Thumb -->
+		<img src="img/bg-img/slide-3.jpg" alt="" />
+		<!-- Overlay Text -->
+		<div class="project_title">
+			<div class="post-date-commnents d-flex">
+				<a href="#">May 19, 2017</a> <a href="#">5 Comment</a>
+			</div>
+			<a href="#">
+				<h5>“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street</h5>
+			</a>
+		</div>
+	</div>
+
+	<!-- Single Slide -->
+	<div class="welcome-single-slide">
+		<!-- Post Thumb -->
+		<img src="img/bg-img/slide-4.jpg" alt="" />
+		<!-- Overlay Text -->
+		<div class="project_title">
+			<div class="post-date-commnents d-flex">
+				<a href="#">May 19, 2017</a> <a href="#">5 Comment</a>
+			</div>
+			<a href="#">
+				<h5>“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street</h5>
+			</a>
+		</div>
+	</div>
+
+	<!-- Single Slide -->
+	<div class="welcome-single-slide">
+		<!-- Post Thumb -->
+		<img src="img/bg-img/slide-4.jpg" alt="" />
+		<!-- Overlay Text -->
+		<div class="project_title">
+			<div class="post-date-commnents d-flex">
+				<a href="#">May 19, 2017</a> <a href="#">5 Comment</a>
+			</div>
+			<a href="#">
+				<h5>“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street</h5>
+			</a>
+		</div>
+	</div>
+
+	</section>
+	<!-- ****** Welcome Area End ****** -->
+
+	<!-- ****** Categories Area Start ****** -->
+	<section class="categories_area clearfix" id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="single_catagory wow fadeInUp" data-wow-delay=".3s">
+					<img src="img/catagory-img/1.jpg" alt="" />
+					<div class="catagory-title">
+						<a href="#">
+							<h5>Embarazo</h5>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="single_catagory wow fadeInUp" data-wow-delay=".6s">
+					<img src="img/catagory-img/2.jpg" alt="" />
+					<div class="catagory-title">
+						<a href="#">
+							<h5>Anticonceptivos</h5>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="single_catagory wow fadeInUp" data-wow-delay=".9s">
+					<img src="img/catagory-img/3.jpg" alt="" />
+					<div class="catagory-title">
+						<a href="#">
+							<h5>Salud</h5>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	<!-- ****** Categories Area End ****** -->
+
+	<!-- ****** Blog Area Start ****** -->
+	<section class="blog_area section_padding_0_80">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-8">
+				<div class="row">
+
+					<!-- Single Post -->
+					<div class="col-12">
+						<div class="single-post wow fadeInUp" data-wow-delay=".2s">
+							<!-- Post Thumb -->
+							<div class="post-thumb">
+								<img src="img/blog-img/1.jpg" alt="" />
+							</div>
+							<!-- Post Content -->
+							<div class="post-content">
+								<div class="post-meta d-flex">
+									<div class="post-author-date-area d-flex">
+										<!-- Post Author -->
+										<div class="post-author">
+											<a href="#">Gisami</a>
+										</div>
+										<!-- Post Date -->
+										<div class="post-date">
+											<a href="#">Enero, 2018</a>
+										</div>
+									</div>
+									<!-- Post Comment & Share Area -->
+									<div class="post-comment-share-area d-flex">
+										<!-- Post Favourite -->
+									</div>
+								</div>
+								<a href="#">
+									<h2 class="post-headline">Que es lo que encontraras en este Blog!</h2>
+								</a>
+								<p>Se brindara contenidos accesibles en lengua de señas ecuatoriano, con 
+								tematicas de salud Sexual y Reproductiva (SSR); Con el objetivo de que 
+								las mujeres sordas puedan acceder a información segura y confiable, como por
+								ejemplo: </p>
+							</div>
+						</div>
+					</div>
+					<!-- Single Post -->
+					<!-- ******* List Blog Area Start ******* -->
+
+					<!-- Single Post -->
+					<div class="col-12">
+						<div class="list-blog single-post d-sm-flex wow fadeInUpBig"
+							data-wow-delay=".2s">
+							<!-- Post Thumb -->
+							<div class="post-thumb">
+								<img src="img/blog-img/6.jpg" alt="" />
+							</div>
+							<!-- Post Content -->
+							<div class="post-content">
+								<div class="post-meta d-flex">
+									<div class="post-author-date-area d-flex">
+										<!-- Post Author -->
+										<div class="post-author">
+											<a href="#">Gismai</a>
+										</div>
+										<!-- Post Date -->
+										<div class="post-date">
+											<a href="#">Febrero, 2018</a>
+										</div>
+									</div>
+									<!-- Post Comment & Share Area -->
+									<div class="post-comment-share-area d-flex">
+										<!-- Post Favourite -->
+										<div class="post-favourite">
+											<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>
+												10</a>
+										</div>
+										<!-- Post Comments -->
+										<div class="post-comments">
+											<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>
+												12</a>
+										</div>
+										<!-- Post Share -->
+										<div class="post-share">
+											<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<h4 class="post-headline">Planificación Familiar</h4>
+								</a>
+								<p>Contenidos sobre metodos Anticonceptivos, relaciones de pareja
+								entre otros. </p>
+								<a href="#" class="read-more">Continue Reading..</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Single Post -->
+					<div class="col-12">
+						<div class="list-blog single-post d-sm-flex wow fadeInUpBig"
+							data-wow-delay=".4s">
+							<!-- Post Thumb -->
+							<div class="post-thumb">
+								<img src="img/blog-img/7.jpg" alt="" />
+							</div>
+							<!-- Post Content -->
+							<div class="post-content">
+								<div class="post-meta d-flex">
+									<div class="post-author-date-area d-flex">
+										<!-- Post Author -->
+										<div class="post-author">
+											<a href="#">Gisami</a>
+										</div>
+										<!-- Post Date -->
+										<div class="post-date">
+											<a href="#">Febrero, 2018</a>
+										</div>
+									</div>
+									<!-- Post Comment & Share Area -->
+									<div class="post-comment-share-area d-flex">
+										<!-- Post Favourite -->
+										<div class="post-favourite">
+											<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>
+												10</a>
+										</div>
+										<!-- Post Comments -->
+										<div class="post-comments">
+											<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>
+												12</a>
+										</div>
+										<!-- Post Share -->
+										<div class="post-share">
+											<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<h4 class="post-headline">Metodos Anticonceptivos</h4>
+								</a>
+								<p>Contenidos sobre Enfermedades de Transmision Sexual, Metodos
+								Anticonceptivos y formas de emplear los estos métodos.</p>
+								<a href="#" class="read-more">Continue Reading..</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Single Post -->
+					<div class="col-12">
+						<div class="list-blog single-post d-sm-flex wow fadeInUpBig"
+							data-wow-delay=".6s">
+							<!-- Post Thumb -->
+							<div class="post-thumb">
+								<img src="img/blog-img/8.jpg" alt="" />
+							</div>
+							<!-- Post Content -->
+							<div class="post-content">
+								<div class="post-meta d-flex">
+									<div class="post-author-date-area d-flex">
+										<!-- Post Author -->
+										<div class="post-author">
+											<a href="#">Gisami</a>
+										</div>
+										<!-- Post Date -->
+										<div class="post-date">
+											<a href="#">Febrero, 2018</a>
+										</div>
+									</div>
+									<!-- Post Comment & Share Area -->
+									<div class="post-comment-share-area d-flex">
+										<!-- Post Favourite -->
+										<div class="post-favourite">
+											<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>
+												10</a>
+										</div>
+										<!-- Post Comments -->
+										<div class="post-comments">
+											<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>
+												12</a>
+										</div>
+										<!-- Post Share -->
+										<div class="post-share">
+											<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<h4 class="post-headline">Consejos de Salud</h4>
+								</a>
+								<p>Recomendaciones de Dietas, comidas saludables, consejos de 
+								alimentación.</p>
+								<a href="#" class="read-more">Continue Reading..</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Single Post -->
+					<div class="col-12">
+						<div class="list-blog single-post d-sm-flex wow fadeInUpBig"
+							data-wow-delay=".8s">
+							<!-- Post Thumb -->
+							<div class="post-thumb">
+								<img src="img/blog-img/9.jpg" alt="" />
+							</div>
+							<!-- Post Content -->
+							<div class="post-content">
+								<div class="post-meta d-flex">
+									<div class="post-author-date-area d-flex">
+										<!-- Post Author -->
+										<div class="post-author">
+											<a href="#">Gisami</a>
+										</div>
+										<!-- Post Date -->
+										<div class="post-date">
+											<a href="#">Febrero, 2018</a>
+										</div>
+									</div>
+									<!-- Post Comment & Share Area -->
+									<div class="post-comment-share-area d-flex">
+										<!-- Post Favourite -->
+										<div class="post-favourite">
+											<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>
+												10</a>
+										</div>
+										<!-- Post Comments -->
+										<div class="post-comments">
+											<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>
+												12</a>
+										</div>
+										<!-- Post Share -->
+										<div class="post-share">
+											<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+										</div>
+									</div>
+								</div>
+								<a href="#">
+									<h4 class="post-headline">Accede a la Comunidad Sorda de Cuenca - Ecuador</h4>
+								</a>
+								<p>Comparte contenido sobre un tema que te gusto con la comunidad sorda.</p>
+								<a href="#" class="read-more">Continue Reading..</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- ****** Blog Sidebar ****** -->
+			<div class="col-12 col-sm-8 col-md-6 col-lg-4">
+				<div class="blog-sidebar mt-5 mt-lg-0">
+					<!-- Single Widget Area -->
+					<div class="single-widget-area about-me-widget text-center">
+						<div class="widget-title">
+							<h6>Gisami</h6>
+						</div>
+						<div class="about-me-widget-thumb">
+							<img src="img/about-img/1.jpg" alt="" />
+						</div>
+						<h4 class="font-shadow-into-light">U. Politecnica Salesiana</h4>
+						<p>Gisami es una Plataforma que sirve de Guia informativa de la salud accesible a las mujeres con identidad</p>
+					</div>
+
+					<!-- Single Widget Area -->
+					<div class="single-widget-area subscribe_widget text-center">
+						<div class="widget-title">
+							<h6>Siguenos</h6>
+						</div>
+						<div class="subscribe-link">
+							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href="#"><i class="fa fa-google" aria-hidden="true"></i></a> <a
+								href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+							<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+						</div>
+					</div>
+
+					<div class="single-widget-area subscribe_widget text-center">
+						<div class="widget-title">
+							<h6>Ingresa</h6>
+						</div>
+					</div>
+
+					<section id="program" class="parallax-section">
+					<div class="container">
+						<div class="row">
+							<center>
+								<div class="wow fadeInUp col-md-12 col-sm-12"
+									data-wow-delay="0.6s">
+									<div class="section-title">
+										<p>Ingrese sus Credenciales</p>
+									</div>
+								</div>
+							</center>
+							<center>
+								<div class="container">
+									<div class="card card-container">
+										<!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+										<img id="profile-img" class="profile-img-card"
+											src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+										<p id="profile-name" class="profile-name-card"></p>
+										<h:form class="form-signin">
+											<span id="reauth-email" class="reauth-email"></span>
+											<div>
+												<div class="form-group">
+													<h:outputText value="Usuario: " />
+													<h:inputText type="email"
+														pt:placeholder="Correo electrónico" class="form-control"
+														value="#{usuarioController.myUser.correo}"
+														
+														id="usuario" />
+												</div>
+												<div class="form-group">
+													<h:outputText value="Password: " />
+													<h:inputSecret
+													value="#{usuarioController.myUser.contrasenia}"
+														class="form-control"
+														pt:placeholder="Ingrese su contraseña" id="contrasenia" />
+												</div>
+											</div>
+												<h:outputText value="#{usuarioController.loginexiste}"
+												id="mensaje" style="color:red; display:block" />
+
+											<h:commandButton
+												action="#{usuarioController.iniciarSesion()}"
+												value="Acceder"
+												class="btn btn-lg btn-primary btn-block btn-signin">
+												<f:ajax render="mensaje usuario contrasena"
+													execute="usuario contrasenia" />
+											</h:commandButton>
+
+										</h:form>
+										<!-- /form -->
+
+									</div>
+									<!-- /card-container -->
+								</div>
+								<!-- /container -->
+							</center>
+
+
+						</div>
+					</div>
+					</section>
+
+
+					<!-- Single Widget Area -->
+					<div class="single-widget-area newsletter-widget">
+						<div class="widget-title text-center">
+							<h6>Registrarse</h6>
+						</div>
+					</div>
+					<div class="leave-comment-area section_padding_50 clearfix">
+						<div class="comment-form">
+							<ui:insert name="crearCuenta">
+							</ui:insert>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	<!-- ****** Blog Area End ****** -->
+
+	<!-- ****** Our Creative Portfolio Area End ****** -->
+
+	<!-- ****** Footer Social Icon Area Start ****** -->
+	<div class="social_icon_area clearfix">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="footer-social-area d-flex">
+						<div class="single-icon">
+							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i><span>facebook</span></a>
+						</div>
+						<div class="single-icon">
+							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+						</div>
+						<div class="single-icon">
+							<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i><span>GOOGLE+</span></a>
+						</div>
+						<div class="single-icon">
+							<a href="#"><i class="fa fa-linkedin-square"
+								aria-hidden="true"></i><span>linkedin</span></a>
+						</div>
+						<div class="single-icon">
+							<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+						</div>
+						<div class="single-icon">
+							<a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i><span>VIMEO</span></a>
+						</div>
+						<div class="single-icon">
+							<a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i><span>YOUTUBE</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ****** Footer Social Icon Area End ****** -->
+
+	<!-- ****** Footer Menu Area Start ****** -->
+	<footer class="footer_area">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="footer-content">
+					<!-- Logo Area Start -->
+					<div class="footer-logo-area text-center">
+						<a href="index.html" class="yummy-logo">Gisami Blog</a>
+					</div>
+					<!-- Menu Area Start -->
+					<nav class="navbar navbar-expand-lg">
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#yummyfood-footer-nav"
+						aria-controls="yummyfood-footer-nav" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<i class="fa fa-bars" aria-hidden="true"></i> Menu
+					</button>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<!-- Copywrite Text -->
+				<div class="copy_right_text text-center">
+					<p>
+						Universidad Politécnica Salesiana | Cuenca - Ecuador <i
+							aria-hidden="true"></i> <a href="https://colorlib.com"
+							target="_blank">Template</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</footer>
+
+	<!-- ****** Footer Menu Area End ****** -->
+
+	<!-- Jquery-2.2.4 js -->
+	<script src="js/jquery/jquery-2.2.4.min.js"></script>
+	<!-- Popper js -->
+	<script src="js/bootstrap/popper.min.js"></script>
+	<!-- Bootstrap-4 js -->
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<!-- All Plugins JS -->
+	<script src="js/others/plugins.js"></script>
+	<!-- Active JS -->
+	<script src="js/active.js"></script>
+</body>
+</html>

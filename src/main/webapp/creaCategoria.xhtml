@@ -28,12 +28,34 @@
 					pt:placeholder="Descripcion Categoria"
 					requiredMessage="Ingrese Descripcion" cols="100" rows="5" />
 				<h:message for="catDescripcion" />
+
 				<h:commandButton action="#{categoriaController.guardar()}"
 					value="Guardar" class="btn btn-success" />
 			</h:panelGrid>
 
 			<h:form>
-			
+				<br />
+				Ingrese Categoria: <h:inputText value="#{contenidoController.filtro}" />
+				<h:commandButton value="Buscar"
+					action="#{contenidoController.buscar()}" />
+				<br />
+				<br />
+
+				<h:dataTable var="content" value="#{contenidoController.listadoFiltrado}"
+					border="2">
+
+					<h:column Style="color: black">
+						<f:facet name="header">Codigo</f:facet>
+				#{content.codigo}
+			</h:column>
+
+					<h:column Style="color: black">
+						<f:facet name="header">Titulo</f:facet>
+				#{content.titulo}
+			</h:column>
+
+					<!-- hasta aki -->
+				</h:dataTable>
 			</h:form>
 		</h:form>
 	</ui:define>

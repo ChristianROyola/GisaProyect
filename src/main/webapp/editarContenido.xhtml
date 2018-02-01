@@ -1,0 +1,78 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" template="pages-blank.xhtml"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+
+
+<f:metadata>
+<f:viewParam name="id" value="#{eventoController.id}"></f:viewParam>
+</f:metadata>
+
+	<ui:define name="titulo">Actualizar Eventos</ui:define>
+	
+	
+	<ui:define name="contenido">
+		<h:form enctype="multipart/form-data" id="formulario">
+	
+	
+	<center><h2></h2></center>
+	
+	<div  class="form-group" align="center" style="background-color:infobackground;">
+				<h2>#{eventoController.evento.nombre}</h2>
+				<hr class="star-primary" />
+			</div>
+	
+	<br/>
+	
+	
+	<div class="alert alert-info">
+			    <strong>Info!</strong> Los campos que contienen * son obligatorios.
+			</div>
+			
+	
+	<h:panelGrid columns="3">
+	
+		
+		<h:outputLabel value="* Nombre del Evento:" for="nombEvento"/>
+		<h:inputText id="nombEvento" value="#{eventoController.evento.nombre}" class="form-control" style="color:blue" pt:placeholder="Nombre del Evento"/>
+		<h:message for="nombEvento"/>
+		
+		
+		
+		<h:outputLabel value="* Fecha del Evento: (yyyy/mm/dd)" for="fechaEvento" />
+		<h:inputText id="fecha" value="#{eventoController.evento.fechaEvento}" class="form-control" style="color:blue" pt:placeholder="Fecha del Evento">
+		<f:convertDateTime pattern="yyyy/mm/dd" />
+		</h:inputText>
+		<h:message for="fechaEvento"/>
+		
+		<h:outputLabel value="* Costo del Evento" for="costoEvento"/>
+		<h:inputText id="Costo" value="#{eventoController.evento.costo}" class="form-control"  
+		onkeypress="if(event.which &lt; 48 || event.which &gt; 57) return false;"/>
+		<h:message for="costoEvento"/>
+		
+		
+	
+		
+		
+	</h:panelGrid>
+		
+		<span class="glyphicon glyphicon-pencil"></span> <h:outputLabel value="* Descripcion:" for="descEvento"/> 
+		<!--  <h:inputText id="descEvento" value="#{eventoController.evento.descripcion}" class="form-control" style="color:blue" pt:placeholder="Descripcion del Evento"/>-->
+		<br/>
+		<h:inputTextarea id="descEvento" value="#{eventoController.evento.descripcion}" required="true"   
+		requiredMessage="Address is required" cols="100" rows="5"></h:inputTextarea>
+		
+		<h:message for="descEvento"/>
+		
+				<br/>
+				<br/>
+	<h:commandButton action="#{eventoController.insertar()}" value="Guardar" 
+		class="btn btn-success" />
+		<h:messages globalOnly="true"/>
+		
+	</h:form>
+	</ui:define>
+</ui:composition>
+	
