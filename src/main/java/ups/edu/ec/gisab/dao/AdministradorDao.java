@@ -9,94 +9,54 @@ import javax.persistence.TypedQuery;
 
 import ups.edu.ec.gisab.modelo.Administrador;
 
-/**
- * Clase Objeto de acceso a datos para la entidad administrador
- * @author Chriss
- *
- */
-
-@Stateless  
+@Stateless
 public class AdministradorDao 
 {
 	@Inject
 	private EntityManager em;
 
-	/**
-	 * Metodo para realizar el insert dentro de la BD.
-	 * @param p
-	 */
 	public void insertAdmin(Administrador p) {
-		System.out.println("Administrador ---- > ID: "+p.getId()+
-				"Correo ----> "+p.getCorreo()+
-				"Contrasenia ----> "+p.getContrasenia());
+		System.out.println("Inserta"+p.getId()+p.getCorreo()+p.getContrasenia());
 		em.persist(p);
 	}
 	
-	/**
-	 * Metodo update del administrador
-	 * @param p
-	 */
 	public void updateAdmin(Administrador p){
-		System.out.println("Update ------> "+p.getId()+p.getCorreo()+p.getContrasenia());
+		System.out.println("Actualiza"+p.getId()+p.getCorreo()+p.getContrasenia());
 		em.merge(p);
 	}
 	
-	/**
-	 * Metodo elimindar administrador
-	 * @param id
-	 */
-	public void deleteAdmin (int id) {
-		Administrador p = selectAdmin(id);
-		em.remove(p);
-	}
-	
-	/**
-	 * Metodo Buscar Admin
-	 * @param id
-	 * @return
-	 */
 	public Administrador selectAdmin(int id) {
 		Administrador p = em.find(Administrador.class, id);
 		return p;
 	}
-
-	/**
-	 * Lista de los administradores
-	 * @return
-	 */
+	
+	public void deletePersona(int id) {
+		Administrador p = selectAdmin(id);
+		em.remove(p);
+	}
 	
 	public List<Administrador> listAdmin() {
 		String sql = "SELECT a FROM Administrador a";
 		TypedQuery<Administrador> query = em.createQuery(sql, Administrador.class);
-		System.out.println("ADMINS --> ");
+		System.out.println("Lista --> ");
 		List<Administrador> listAdmin = query.getResultList();
 		return listAdmin;
 	}
 	
-	
-	/**
-	 * Almacena informacion administrador
-	 * @param a
-	 */
 	public void guardar (Administrador a) {
 		Administrador aux = selectAdmin(a.getId());
+		System.out.println("ID:" +a.getId());
 		if(aux!=null){
 			updateAdmin(a);
 		}
 		else {
-			System.out.println("INSERT!");
+			System.out.println("Grabando!");
 			insertAdmin(a);	
 		}
 	}
 	
-	/**
-	 * Verificar datos para login
-	 * @param user
-	 * @param pass
-	 * @return
-	 */
-	
-	public List<Administrador> login(String user, String pass) {
+	public List<Administrador> login(String user, String pass) 
+	{
 		System.out.println("USUARIO: "+user+", Pass: "+pass);
 		String sql = "SELECT a FROM Administrador a WHERE a.correo = '"+user+"' AND a.contrasenia='"+pass+"'";
 		TypedQuery<Administrador> query = em.createQuery(sql, Administrador.class);
@@ -104,11 +64,14 @@ public class AdministradorDao
 		return admin;
 	}
 	
-	/**
-	 * Validar Correo
-	 * @param user
-	 * @return
-	 */
+	public List<Administrador> admins() 
+	{
+		//System.out.println("USUARIO: "+user+", Pass: "+pass);
+		String sql = "SELECT a FROM Administrador";
+		TypedQuery<Administrador> query = em.createQuery(sql, Administrador.class);
+		List<Administrador> admin = query.getResultList();
+		return admin;
+	}
 	
 	public List<Administrador> verificaCorreo(String user)
 	{
@@ -117,12 +80,6 @@ public class AdministradorDao
 		List<Administrador>admin=query.getResultList();
 		return admin;
 	}
-	
-	/**
-	 * Lista Administradores con ID
-	 * @param id
-	 * @return
-	 */
 	
 	public List<Administrador> listAdminID(int id){
 		String sql = "SELECT a FROM Administrador a WHERE a.id = '"+id+"'";
