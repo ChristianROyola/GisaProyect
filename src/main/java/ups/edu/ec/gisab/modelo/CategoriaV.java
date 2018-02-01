@@ -1,5 +1,8 @@
 package ups.edu.ec.gisab.modelo;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import java.util.ArrayList;
 import java.util.List; 
 
@@ -15,17 +18,20 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
 
+
 @Entity
 @Table(name = "elgg_Categoria")
-public class Categoria {
+public class CategoriaV {
 
 	@Id
 	@Column(name = "cat_id")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+//	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 
 	@Column(name = "cat_nombre")
@@ -34,14 +40,16 @@ public class Categoria {
 	private String nombre;
 
 	@Column(name = "cat_descripcion")
+	@NotNull
 	private String descipcion;
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	// cedula como se va a llamar en la otra tabla, el id de la tabla donde se crea
-	@JoinColumn(name = "cont_cat_id", referencedColumnName = "cat_id")
+	
+	@OneToMany(cascade = {CascadeType.ALL})
+	@JoinColumn(name = "vid_cat_id", referencedColumnName = "cat_id")
+	private List<Video> videos;
 
-	private List<Contenido> contenido;
-
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -66,24 +74,23 @@ public class Categoria {
 		this.descipcion = descipcion;
 	}
 
-	public List<Contenido> getContenidos() {
-		return contenido;
+	public List<Video> getVideos() {
+		return videos;
 	}
 
-	public void setContenidos(List<Contenido> contenidos) {
-		this.contenido = contenidos;
+	public void setVideos(List<Video> videos) {
+		this.videos = videos;
 	}
 
 	@Override
 	public String toString() {
-		return "Categoria [id=" + id + ", nombre=" + nombre + ", descipcion=" + descipcion + ", contenido=" + contenido
-				+ "]";
+		return "Categoria [id=" + id + ", nombre=" + nombre + ", descipcion=" + descipcion + ", videos=" + videos + "]";
 	}
-
-	public void addContent(Contenido contenidos) {
-		if (contenido == null) {
-			contenido = new ArrayList<>();
-			contenido.add(contenidos);
-		}
-	}
+//
+//	public void addVideo(Video video) {
+//		if (videos == null) {
+//			videos = new ArrayList<>();
+//		}
+//		videos.add(video);
+//	}
 }

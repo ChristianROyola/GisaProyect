@@ -11,34 +11,34 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
-@Table(name = "elgg_admin")
-public class Administrador 
+@Table(name = "gisa_user")
+public class Usuario 
 {
 	@Id
-	@Column(name = "admin_id")
+	@Column(name = "user_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int id;
 	
-	@Column(name = "admin_nombre")
+	@Column(name = "user_nombre")
 	@NotBlank(message = "Ingrese un nombre Porfavor")
 	private String nombre;
-
-	@Column(name = "admin_apellido")
+	
+	@Column(name = "user_apellido")
 	@NotBlank(message = "Ingrese un apellido Porfavor")
 	private String apellido;
-		
-	@Column(name = "admin_correo")
+	
+	@Column(name = "user_correo")
 	@NotBlank(message = "Ingrese un correo Porfavor") 
 	private String correo;
 	
-	@Column(name = "admin_perfil")
+	@Column(name = "user_perfil")
 	private String perfil;
-
-	@Column(name = "admin_contrasenia")
+	
+	@Column(name = "user_contrasenia")
 	@Size(min = 4, message = "Debe ingresar un minimo de 4 caracteres")
 	private String contrasenia;
-
-	@Column(name = "admin_estado")
+	
+	@Column(name = "user_estado")
 	private String estado;
 
 	public int getId() {
@@ -99,8 +99,7 @@ public class Administrador
 
 	@Override
 	public String toString() {
-		return "Administrador [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo
-				+ ", perfil=" + perfil + ", contrasenia=" + contrasenia + ", estado=" + estado + "]";
-	}
-
+		return "User [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", perfil="
+				+ perfil + ", contrasenia=" + contrasenia + ", estado=" + estado + "]";
+	}	
 }
