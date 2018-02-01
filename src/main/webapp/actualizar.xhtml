@@ -8,59 +8,72 @@
 	<ui:define name="contenido">
 
 		<h:form>
-		<h:outputText  value="Sin datos" rendered="#{empty  administradorController.ladmins}"></h:outputText>
-			<h:dataTable var="admin" class="table table-hover" style="color:black"
+		<h:outputText  value="El registro no contiene datos" rendered="#{empty  administradorController.ladmins}"></h:outputText>
+			<h:dataTable var="vpersonas" class="table table-hover" style="color:black"
 				value="#{administradorController.listaAdmin()}" border="1">
 
 				<h:column Style="color: black">
-					<f:facet name="header">Id</f:facet>	#{admin.id}
-				</h:column>
+					<f:facet name="header">Id</f:facet>
+		#{vpersonas.id}
+		</h:column>
 
 				<h:column Style="color: black">
-					<f:facet name="header">Nombre:</f:facet>#{admin.nombre}
-				</h:column>
+					<f:facet name="header">Nombre:</f:facet>
+		#{vpersonas.nombre}
+		</h:column>
 
 				<h:column Style="color: black">
-					<f:facet name="header">Apellido</f:facet>#{admin.apellido}
-				</h:column>
+					<f:facet name="header">Apellido</f:facet>
+		#{vpersonas.apellido}
+		</h:column>
 
 				<h:column Style="color: black">
-					<f:facet name="header">Correo</f:facet>#{admin.correo}
-				</h:column>
+					<f:facet name="header">Correo</f:facet>
+		#{vpersonas.correo}
+		</h:column>
 
 				<h:column Style="color: black">
-					<f:facet name="header">Perfil</f:facet>#{admin.perfil}
-				</h:column>
+					<f:facet name="header">Perfil</f:facet>
+		#{vpersonas.perfil}
+		</h:column>
 
 				<h:column Style="color: black">
 					<f:facet name="header">Contrasenia</f:facet>
-				</h:column>
+		******
+		</h:column>
 
 				<h:column Style="color: black">
-					<f:facet name="header">Estado</f:facet>#{admin.estado}
-				</h:column>
+					<f:facet name="header">Estado</f:facet>
+		#{vpersonas.estado}
+		</h:column>
 
 				<h:column Style="color: black">
 					<center><f:facet name="header" Style="color: black">Editar</f:facet></center>
-					<center> <a href="rescue.xhtml?id=#{admin.id}" class="btn btn-info btn-md"> Editar </a>
+					<center>
+						<a href="recuperarPersona.xhtml?id=#{vpersonas.id}"
+							class="btn btn-info btn-md"> Editar </a>
 					</center>
 					</h:column>
 					
 					<h:column>
 					<center><f:facet name="header" Style="color: black">Eliminar</f:facet></center>
-					<center> <h:commandButton value="Eliminar" class="btn btn-danger btn-md"
-					action="#{administradorController.eliminarAdmins(admin.id)}"></h:commandButton>
+					<center>
+						<h:commandButton value="Eliminar" class="btn btn-danger btn-md"
+							action="#{administradorController.eliminar(vpersonas.id)}"></h:commandButton>
 					</center>
 				</h:column>
 				
 				<h:column Style="color: black">
 					<center><f:facet name="header" Style="color: black">Crear</f:facet></center>
-					<center> <a href="rescue.xhtml?id=#{admin.id}" class="btn btn-info btn-md"> Crear </a>
+					<center>
+						<a href="recuperarPersona.xhtml?id=#{vpersonas.id}"
+							class="btn btn-info btn-md"> Crear </a>
 					</center>
 					</h:column>
 				
 			</h:dataTable>
-			<h:commandButton action="crearPersona" value="Nuevo Admin" class="btn btn-primary" />
+			<h:commandButton action="crearPersona" value="Nuevo Usuario"
+				class="btn btn-primary" />
 		</h:form>
 	</ui:define>
 </ui:composition>

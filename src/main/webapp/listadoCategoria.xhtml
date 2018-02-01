@@ -11,17 +11,21 @@
 				rendered="#{empty  categoriaController.categorias}"></h:outputText>
 			<h:dataTable var="listaCategoria" style="color:black"
 				value="#{categoriaController.categorias}" border="2" class="table">
-				<h:column Style="color: black">
-					<f:facet name="header">Codigo</f:facet>#{listaCategoria.id}
-				</h:column>
 
 				<h:column Style="color: black">
-					<f:facet name="header">Nombre</f:facet>#{listaCategoria.nombre}
-				</h:column>
+					<f:facet name="header">Codigo</f:facet>
+			#{listaCategoria.id}
+		</h:column>
 
 				<h:column Style="color: black">
-					<f:facet name="header">Descripcion</f:facet>#{listaCategoria.descipcion}
-				</h:column>
+					<f:facet name="header">Nombre</f:facet>
+			#{listaCategoria.nombre}
+		</h:column>
+
+				<h:column Style="color: black">
+					<f:facet name="header">Descripcion</f:facet>
+			#{listaCategoria.descipcion}
+		</h:column>
 
 			</h:dataTable>
 		</h:form>

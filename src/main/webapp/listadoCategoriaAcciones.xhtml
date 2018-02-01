@@ -1,0 +1,62 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" template="pages-blank.xhtml">
+
+	<ui:define name="titulo">Categorias</ui:define>
+	<ui:define name="contenido">
+
+		<h:form>
+
+			<h:dataTable var="listaCategoria" style="color:black"
+				value="#{categoriaController.categorias}" border="2" class="table">
+
+
+				<h:column Style="color: black">
+					<f:facet name="header">Código</f:facet>
+			#{listaCategoria.id}
+		</h:column>
+
+				<h:column Style="color: black">
+					<f:facet name="header">Nombre</f:facet>
+			#{listaCategoria.nombre}
+		</h:column>
+
+				<h:column Style="color: black">
+					<f:facet name="header">Descripción</f:facet>
+			#{listaCategoria.descipcion}
+		</h:column>
+
+				<!-- aki -->
+
+				<h:column Style="color: black">
+					<f:facet name="header" Style="color: black">
+						<center>Accion Editar</center>
+					</f:facet>
+
+					<center>
+						<a href="editarCategoria.xhtml?id=#{listaCategoria.id}"
+							class="btn btn-info btn-lg"> <span
+							class="glyphicon glyphicon-refresh"></span> Editar
+						</a>
+					</center>
+
+				</h:column>
+
+				<!-- hasta aki -->
+
+				<h:column Style="color: black">
+					<f:facet name="header" Style="color: black">Accion Eliminar</f:facet>
+					<h:commandButton value="Eliminar" class="btn btn-danger"
+						action="#{categoriaController.eliminaCategoria(listaCategoria.id)}" />
+				</h:column>
+
+			</h:dataTable>
+			<h:commandButton action="creaCategoria" value="Crear nueva Categoria" />
+			<h:commandButton action="listadoCategoriaAcciones" value="Actualizar" />
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>
+

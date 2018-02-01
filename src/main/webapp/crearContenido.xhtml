@@ -1,0 +1,82 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" template="pages-blank.xhtml"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+	<ui:define name="titulo">Crear Contenido</ui:define>
+
+	<script type="text/javascript">
+            var onload_cb = function() {
+            }
+            function statusUpdate(data) {
+                var statusArea = document.getElementById("status");
+                var text = statusArea.value;
+                text = text + "Name: " + data.source.id;
+                if (data.type === "event") {
+                    text = text + " Event: " + data.status + " ";
+                }
+                statusArea.value = text;
+            }
+        </script>
+
+	<ui:define name="contenido">
+		<h:form enctype="multipart/form-data" id="formulario">
+
+			<center>
+				<h2>Ingreso de Contenidos</h2>
+			</center>
+			<br />
+			<br />
+
+			<div class="alert alert-info">
+				<strong></strong> * Campos Obligatorios.
+			</div>
+
+
+			<h:panelGrid columns="3">
+				<h:outputLabel value="* Titulo " for="tituloContenido" />
+				<h:inputText id="tituloContenido"
+					value="#{fileUploadBean.ct.vid_name}"
+					class="form-control" style="color:blue" pt:placeholder="Titulo" />
+				<h:message for="tituloContenido" />
+
+			</h:panelGrid>
+
+			<span class="glyphicon glyphicon-pencil"></span>
+			<h:outputLabel value="* Descripción:" for="descContenido" />
+
+			<!--  <h:inputText id="descContenido" value="#{eventoController.evento.descripcion}" class="form-control" style="color:blue" pt:placeholder="Descripcion del Evento"/>-->
+			<br />
+			<h:inputTextarea id="descContenido"
+				value="#{fileUploadBean.ct.vid_descripcion}" required="true"
+				requiredMessage="Descripcion" cols="100" rows="5"></h:inputTextarea>
+
+			<h:message for="descContenido" />
+
+			<br />
+			<br />
+			
+		</h:form>
+		
+		Seleccionar Recurso:
+        <h:form enctype="multipart/form-data" prependId="false">
+        <h:panelGrid>
+        
+			<h:inputFile value="#{fileUploadBean.uploadFile}" />
+			<br />	
+
+			<h:commandButton value="Almacenar Contenido" action="#{fileUploadBean.uploadFile()}">
+				<f:ajax execute="@all" render="@all" onevent="statusUpdate" />
+			</h:commandButton>
+			<p />			
+			
+			</h:panelGrid>
+			
+			<h:commandButton action="#{contenidoController.loadContenido()}"
+				value="Almacenar Contenido" class="btn btn-success" />
+			<h:messages globalOnly="true" />
+			
+		</h:form>				
+	</ui:define>
+</ui:composition>

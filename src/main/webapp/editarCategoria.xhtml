@@ -1,0 +1,44 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" template="pages-blank.xhtml"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+	<f:metadata>
+		<f:viewParam name="id" value="#{contenidoController.id}" />
+	</f:metadata>
+
+	<ui:define name="titulo">Categoria</ui:define>
+	
+	<ui:define name="contenido">
+		<h:form enctype="multipart/form-data" id="formulario">
+
+			<h1>Modificar Categoria</h1>
+			<br />
+			<br />
+
+			<h:panelGrid columns="3">
+
+				<h:outputLabel value="Codigo:" for="id" />
+				<h:inputText id="id" value="#{categoriaController.categoria.id}"
+					class="form-control" />
+				<h:message for="id" />
+
+				<h:outputLabel value="Nombre Categoria:" for="nombreCateg" />
+				<h:inputText id="nombreCateg"
+					value="#{categoriaController.categoria.nombre}"
+					class="form-control" />
+				<h:message for="nombreCateg" />
+
+				<h:outputLabel value="Descripcion:" for="descCateg" />
+				<h:inputTextarea id="descCateg"
+					value="#{categoriaController.categoria.descipcion}"
+					class="form-control" />
+				<h:message for="descCateg" />
+
+				<h:commandButton action="#{categoriaController.guardar()}"
+					value="Guardar" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
