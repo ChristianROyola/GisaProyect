@@ -8,17 +8,13 @@ import javax.inject.Inject;
 
 import ups.edu.ec.gisab.dao.CategoriaDao;
 import ups.edu.ec.gisab.modelo.Categoria;
+import ups.edu.ec.gisab.modelo.Contenido;
 
 
-/**
- * Entidad de validacion de categorias 
- * @author Chriss
- *
- */
 @ManagedBean
 public class CategoriaController {
 	
-	 
+	
 	@Inject
 	private CategoriaDao catedao;
 	
@@ -39,7 +35,7 @@ public class CategoriaController {
 
 	public void setId(int id) {
 		this.id = id;
-		loadCategoriaEditar(id);
+		loadCategoriaEditar(id);//parametros
 	}
 	
 	public Categoria getCategoria() {
@@ -74,23 +70,14 @@ public class CategoriaController {
 		return "listadoCategoriaAcciones";
 	}
 	
-	/**
-	 * Guardar categorias 
-	 * @return
-	 */
-	
 	public String guardar(){
-		catedao.guardarCategoria(categoria);
 		System.out.println(categoria);	
-
+		catedao.guardarCategoria(categoria);
 		loadCategoria();
+		//return null;
 		return "listadoCategoria";
 	}
 	
-	/**
-	 * Agrega categorias 
-	 * @return
-	 */
 	public String agregaCategoria(){
 		categoria.getContenidos().add(new Contenido());
 		return null;
