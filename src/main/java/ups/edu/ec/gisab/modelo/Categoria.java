@@ -37,7 +37,6 @@ public class Categoria {
 	private String descipcion;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	// cedula como se va a llamar en la otra tabla, el id de la tabla donde se crea
 	@JoinColumn(name = "cont_cat_id", referencedColumnName = "cat_id")
 
 	private List<Contenido> contenido;
