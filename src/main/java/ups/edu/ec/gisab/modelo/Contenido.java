@@ -46,29 +46,6 @@ public class Contenido {
 	
 	@ManyToOne
 	private Categoria categoria;
-	
-	/*
-	@Column(name="even_latiud")
-	private double latitud;
-	
-	@Column(name="even_longitud")
-	private double longitud;
-	*/
-	
-
-	//------relaciones entre evento a salon de recepciones y de evento a asistencia evento
-
-	//@OneToMany(cascade={CascadeType.ALL}, fetch=FetchType.EAGER)
-	//@JoinColumn(name="eve_rec_fk", referencedColumnName="even_codigo")
-	//private List<SalonRecepcion> salones;
-	
-	//@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	//cedula como se va a llamar en la otra tabla, el id de la tabla donde se crea
-	//@JoinColumn(name="aev_even_id", referencedColumnName="even_codigo")
-	//private List<AsistenciaEvento> AsistenciaEventos;
-	
-	
-	//METHODS GETTERS AND SETTER
 		
 	public int getCodigo() {
 		return codigo;
@@ -116,33 +93,7 @@ public class Contenido {
 				+ Arrays.toString(foto) + ", categoria=" + categoria + "]";
 	}
 	
-/*
-	public List<AsistenciaEvento> getAsistenciaEventos() {
-		return AsistenciaEventos;
-	}
 
-	public void setAsistenciaEventos(List<AsistenciaEvento> asistenciaEventos) {
-		AsistenciaEventos = asistenciaEventos;
-	}
-  
-  	public List<SalonRecepcion> getSalones() {
-		return salones;
-	}
-
-	public void setSalones(List<SalonRecepcion> salones) {
-		this.salones = salones;
-	}
-
-*/
-	
-
-	/*@Override
-	public String toString() {
-		return "Evento [codigo=" + codigo + ", nombre=" + nombre + ", descripcion=" + descripcion + ", foto="
-				+ Arrays.toString(foto) + ", costo=" + costo + ", fechaEvento=" + fechaEvento + "]";
-	}*/
-	
-	
 
 	
 			
